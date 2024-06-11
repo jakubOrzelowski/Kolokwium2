@@ -10,9 +10,9 @@ public class DbService : IDbService
     {
         _context = context;
     }
-    
-    //public async Task<Characters> GetCharacterById(int characterId)
-   // {
-        
-   // }
+
+    public Task<Characters> GetCharacterById(int characterId)
+    {
+        throw new NotImplementedException();
+    }
 }
