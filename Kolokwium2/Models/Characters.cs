@@ -12,5 +12,4 @@ public class Characters
     public string LastName { get; set; }
     public int CurrentWeight { get; set; }
     public int MaxWeight { get; set; }
-
 }

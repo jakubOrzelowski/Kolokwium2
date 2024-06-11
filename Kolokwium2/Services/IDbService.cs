@@ -1,8 +1,8 @@
-using Kolokwium2.Models;
+using Kolokwium2.DTOs;
 
 namespace Kolokwium2.Services;
 
 public interface IDbService
 {
-    Task<Characters> GetCharacterById(int characterId);
+    Task<CharacterDto> GetCharacter(int characterId);
 }

@@ -1,5 +1,5 @@
 using Kolokwium2.Data;
-using Kolokwium2.Models;
+using Kolokwium2.DTOs;
 
 namespace Kolokwium2.Services;
 
@@ -11,8 +11,10 @@ public class DbService : IDbService
         _context = context;
     }
 
-    public Task<Characters> GetCharacterById(int characterId)
+    public async Task<CharacterDto> GetCharacter(int characterId)
     {
-        throw new NotImplementedException();
+        return new CharacterDto
+        {
+        };
     }
 }

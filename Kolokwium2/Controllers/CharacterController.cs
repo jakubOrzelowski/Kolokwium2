@@ -1,22 +1,25 @@
-using Kolokwium2.Services;
+﻿using Kolokwium2.Data;
+using Kolokwium2.DTOs;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Kolokwium2.Controllers;
 
-[ApiController]
 [Route("api/[controller]")]
-public class CharactersController : ControllerBase
+[ApiController]
+public class CharacterController : ControllerBase
 {
-    private readonly IDbService _dbService;
+    private readonly DatabaseContext _context;
 
-    public CharactersController(IDbService dbService)
+    public CharacterController(DatabaseContext context)
     {
-        _dbService = dbService;
+        _context = context;
     }
 
-   // [HttpGet("{characterId}")]
-    //public async Task<IActionResult> GetCharacter(int characterId)
-   // {
+    [HttpGet("{characterId}")]
+    public async Task<IActionResult> GetCharacter(int characterId)
+    {
         
-   // }
+        return Ok();
+    }
 }
